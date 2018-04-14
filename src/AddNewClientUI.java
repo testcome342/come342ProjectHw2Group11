@@ -2,8 +2,14 @@ public class AddNewClientUI {
 	
 	AddNewClientControl clientControl =new AddNewClientControl();
 	
-	public void startInterfaceUI() {
-		clientControl.getClientControl();
+	public void startInterfaceUI(int selectType) {
+		if (selectType==1) {
+			clientControl.getClientControl(1);
+
+		}else if (selectType==2) {
+			clientControl.getClientControl(2);
+
+		}
 	}
 	public void createNewClientUI() {
 		
@@ -11,7 +17,7 @@ public class AddNewClientUI {
 		clientControl.createNewClientControl();
 		
 	}
-	public void createNewCampaignUI(String title,String campaignStartDate,String campaignFinishDate,double estimatedCost) {
-		clientControl.createNewCampaignControl(title, campaignStartDate, campaignFinishDate, estimatedCost);
+	public void createNewCampaignUI() {
+		clientControl.createNewCampaignControl();
 	}	
 }
